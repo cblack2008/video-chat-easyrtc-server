@@ -1,0 +1,23 @@
+{
+    "name": "video-chat-easyrtc-server",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "deploy": "sls deploy --aws-profile caredev-caredevleads --template aws-nodejs --stage qa --region us-west-2"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "open-easyrtc": "^2.0.14",
+        "react-resizable": "^3.0.4",
+        "serve-static": "^1.14.1",
+        "serverless": "^2.72.3",
+        "serverless-domain-manager": "^6.0.3",
+        "serverless-http": "^3.0.1",
+        "serverless-prune-plugin": "^2.0.1",
+        "serverless-pseudo-parameters": "^2.6.1",
+        "serverless-wsgi": "^3.0.0",
+        "socket.io": "^2.4.0"
+    }
+}
