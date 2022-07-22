@@ -13,13 +13,17 @@ const app = express();
 app.use(cors());
 app.use(serveStatic('static', { index: ['index.html'] }));
 
+app.get('/health-check', (req, res) => {
+    res.json({ message: 'Server up and running' });
+});
+
 // if (local) {
 // Start Express http server on port 8080
 var webServer = http.createServer(app);
 
 // Listen on port 8080
-webServer.listen(8080, function () {
-    console.log('listening on http://localhost:8080');
+webServer.listen(5000, function () {
+    console.log('listening on http://localhost:5000');
 });
 // }
 
